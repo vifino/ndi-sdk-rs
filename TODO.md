@@ -1,0 +1,11 @@
+# ndi-sdk TODO
+- [x] vendored headers
+- [x] minimize generated bindings
+- [x] dynamic loading
+- [x] finding
+- [x] sources
+- [x] routing
+- [ ] send
+- [ ] receive
+- [ ] tally stuff
+- [ ] ptz
