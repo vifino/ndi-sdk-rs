@@ -1,6 +1,6 @@
 [package]
 name = "ndi-sdk"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Adrian 'vifino' Pistol <vifino@posteo.net>"]
 description = "Dynamically-loading NDI SDK bindings"
 categories = ["api-bindings"]
