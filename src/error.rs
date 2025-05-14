@@ -19,6 +19,9 @@ pub enum NDIError {
 
     #[error("Failed to parse C String as valid UTF-8: {0}")]
     Utf8Error(#[from] Utf8Error),
+
+    #[error("String contains NULL bytes, cannot convert to C String")]
+    InvalidCString,
 }
 
 pub type NDIResult<T> = std::result::Result<T, NDIError>;

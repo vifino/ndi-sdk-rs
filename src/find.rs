@@ -103,7 +103,7 @@ impl FindInstance {
         let mut sources = Vec::new();
         for idx in 0..num_sources as usize {
             let source = unsafe { &*sources_ptr.add(idx) };
-            sources.push(Source::from_c(source)?);
+            sources.push(source.into());
         }
         Ok(sources)
     }
@@ -134,8 +134,8 @@ mod tests {
                 for (idx, source) in sources.iter().enumerate() {
                     desired_sources.push(source);
                     println!("\tSource index: {}", idx);
-                    println!("\t\tName: {}", source.get_ndi_name()?);
-                    println!("\t\tURL:  {}", source.get_url_address()?);
+                    println!("\t\tName: {}", source.ndi_name);
+                    println!("\t\tURL:  {}", source.url_address);
                 }
                 // We'll just bail out early.
                 break;

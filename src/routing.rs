@@ -49,7 +49,7 @@ impl RouteInstance {
         };
 
         let guard = self.inner.lock().expect("Expected Mutex to work");
-        let _undefined = unsafe { change_fn((*guard).0, source.inner) };
+        let _undefined = source.with_raw(|src| unsafe { change_fn((*guard).0, src) });
         Ok(())
     }
 
